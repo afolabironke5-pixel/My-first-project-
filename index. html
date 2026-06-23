@@ -1,52 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Nigerian Proverbs</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-      background-color: #fff8dc;
-    }
-    #proverb {
-      font-size: 1.5em;
-      margin: 20px;
-      color: #333;
-    }
-    button {
-padding: 10px 20px;
-      font-size: 1em;
-      background-color: #008751;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #006644;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Nigerian Proverbs</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        background-color: #fff8dc;
+      }
+      #proverb {
+        font-size: 1.5em;
+        margin: 20px;
+        color: #333;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #008751;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+button:hover {
+        background-color: #006644;
+      }
+    </style>
 </head>
-<body>
-  <h1>Wisdom from Nigeria</h1>
-  <p id="proverb">Click the button to see a proverb!</p>
-  <button onclick="showProverb()">Show Proverb</button>
-
-  <script>
-    const proverbs = [
-      "Wisdom is like a baobab tree; no one individual can embrace it.",
-      "A child who is not embraced by the village will burn it down to feel its warmth.",
-      "The river that forgets its source will dry up.",
-      "He who learns, teaches.",
-      "No matter how long the night, the day is sure to come."
-    ];
-
-    function showProverb() {
-      const randomIndex = Math.floor(Math.random() * proverbs.length);
-      document.getElementById("proverb").innerText = proverbs[randomIndex];
-    }
-  </script>
-</body>
-</html>

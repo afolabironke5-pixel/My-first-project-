@@ -25,8 +25,27 @@
         border-radius: 5px;
         cursor: pointer;
       }
-button:hover {
+      button:hover {
         background-color: #006644;
       }
     </style>
 </head>
+<body>
+    <h1>Nigerian Proverbs 🌍</h1>
+    <p id="proverb">Click the button to see a proverb.</p>
+    <button onclick="showProverb()">Show Proverb</button>
+
+    <script>
+      const proverbs = [
+        "A bird that flies off the earth and lands on an anthill is still on the ground.",
+        "He who is destined for power does not have to fight for it.",
+        "Even the best cooking pot will not produce food.",
+        "A man who uses force is afraid of reasoning."
+      ];
+      function showProverb() {
+        const randomIndex = Math.floor(Math.random() * proverbs.length);
+        document.getElementById("proverb").innerText = proverbs[randomIndex];
+      }
+    </script>
+</body>
+</html>

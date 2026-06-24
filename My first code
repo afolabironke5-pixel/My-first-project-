@@ -1,12 +1,32 @@
-html
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My First Code</title>
-  </head>
-  <body>
-    <h1>Hello, GitHub!</h1>
-    <p>This is my first line of code.</p>
-  </body>
-</html>
-`
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nigerian Proverbs</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        background-color: #fff8dc;
+      }
+      #proverb {
+        font-size: 1.5em;
+        margin: 20px;
+        color: #333;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #008751;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+button:hover {
+        background-color: #006644;
+      }
+    </style>
+</head>

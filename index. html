@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My First Website - Fun Facts</title>
+  <title>My First Website - Fun Facts + Login</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,13 +11,13 @@
       margin-top: 50px;
       background: linear-gradient(135deg, #f0f8ff, #e6ffe6);
     }
-    #fact-box {
+    #fact-box, #login-box {
       max-width: 600px;
       margin: 20px auto;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.95);
       border-radius: 10px;
-      box-shadow: 0 4po  8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     button {
       padding: 10px 20px;
@@ -46,20 +46,41 @@
       border-top: 1px solid #ccc;
       padding-top: 10px;
     }
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
   <h1>🌍 Random Fun Facts</h1>
 
+  <!-- Fun Facts Section -->
   <div id="fact-box">
     <p id="fact">Click the button to see a fun fact!</p>
     <button onclick="showFact()">Show Fact</button>
   </div>
 
-  <!-- Your signature line -->
+  <!-- Login Section -->
+  <div id="login-box">
+    <h2>🔑 Login</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Signature -->
   <p id="signature">✨ Created by Aderonke 🌸</p>
 
+  <!-- Scripts -->
   <script>
+    // Fun facts array
     const facts = [
       "Bananas are berries, but strawberries are not.",
       "Honey never spoils — archaeologists found edible honey in ancient tombs.",
@@ -73,7 +94,43 @@
       document.getElementById("fact").innerText = facts[randomIndex];
     }
   </script>
+
+  <!-- Firebase Authentication -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    // Replace with your Firebase config
+    const firebaseConfig = {
+      apiKey: "YOURAPIKEY",
+      authDomain: "YOURPROJECTID.firebaseapp.com",
+      projectId: "YOURPROJECTID",
+      storageBucket: "YOURPROJECTID.appspot.com",
+      messagingSenderId: "YOURSENDERID",
+      appId: "YOURAPPID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Login handler
+    document.getElementById("loginForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Login successful!");
+          console.log(userCredential.user);
+        })
+        .catch((error) => {
+          alert("Login failed: " + error.message);
+        });
+    });
+  </script>
 </body>
 </html>
 `
- 
+
+

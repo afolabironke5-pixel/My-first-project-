@@ -1,4 +1,3 @@
-`html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +21,7 @@
     button {
       padding: 10px 20px;
       font-size: 1em;
-      background-color: #008751;
+background-color: #008751;
       color: white;
       border: none;
       border-radius: 5px;
@@ -47,7 +46,7 @@
       padding-top: 10px;
     }
     input {
-      display: block;
+display: block;
       margin: 10px auto;
       padding: 10px;
       width: 80%;
@@ -78,9 +77,8 @@
   <!-- Signature -->
   <p id="signature">✨ Created by Aderonke 🌸</p>
 
-  <!-- Scripts -->
+  <!-- Fun Facts Script -->
   <script>
-    // Fun facts array
     const facts = [
       "Bananas are berries, but strawberries are not.",
       "Honey never spoils — archaeologists found edible honey in ancient tombs.",
@@ -88,32 +86,32 @@
       "Sharks existed before trees.",
       "A day on Venus is longer than a year on Venus."
     ];
-
     function showFact() {
       const randomIndex = Math.floor(Math.random() * facts.length);
       document.getElementById("fact").innerText = facts[randomIndex];
     }
   </script>
 
-  <!-- Firebase Authentication -->
+  <!-- ✅ Firebase Script -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
     import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
 
-    // Replace with your Firebase config
     const firebaseConfig = {
-      apiKey: "YOURAPIKEY",
-      authDomain: "YOURPROJECTID.firebaseapp.com",
-      projectId: "YOURPROJECTID",
-      storageBucket: "YOURPROJECTID.appspot.com",
-      messagingSenderId: "YOURSENDERID",
-      appId: "YOURAPPID"
+      apiKey: "AIzaSyBpZcHzA-cMgbsGUzbfA-LeK9BFYdtVum4",
+      authDomain: "myfirstwebsitechallenge.firebaseapp.com",
+      projectId: "myfirstwebsitechallenge",
+      storageBucket: "myfirstwebsitechallenge.firebasestorage.app",
+      messagingSenderId: "496166912127",
+      appId: "1:496166912127:web:23db90ad160aeb8ddeff4a",
+      measurementId: "G-2T0YTVWQ81"
     };
 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
+    const analytics = getAnalytics(app);
 
-    // Login handler
     document.getElementById("loginForm").addEventListener("submit", (e) => {
       e.preventDefault();
       const email = document.getElementById("email").value;
@@ -131,6 +129,3 @@
   </script>
 </body>
 </html>
-`
-
-

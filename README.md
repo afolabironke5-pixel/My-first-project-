@@ -23,13 +23,12 @@ Usage
 - Enjoy random fun facts displayed on the page.
 
 Deployment
-This project supportsauto-deployment with GitHub Actions.
+This project supports auto-deployment with GitHub Actions.
 - Workflow file: .github/workflows/firebase-deploy.yml
 - Runs on pushes to main branch
 - Uses Firebase CLI and a secret token (FIREBASE_TOKEN)
 
 Live Demo
-You can view the deployed project here: [Firebase Hosting live link]
-
-Author
+- GitHub Repository: https://github.com/afolabironke5-pixel/My-first-project-
+- Firebase Hosting: https://funfacts-website.web.app Author
 Created by Aderonke 💎

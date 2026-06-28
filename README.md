@@ -30,5 +30,6 @@ This project supports auto-deployment with GitHub Actions.
 
 Live Demo
 - GitHub Repository: https://github.com/afolabironke5-pixel/My-first-project-
-- Firebase Hosting: https://funfacts-website.web.app Author
+- Firebase Hosting: https://my-first-website-85419.web.app
+Author
 Created by Aderonke 💎

@@ -23,7 +23,8 @@ Usage
 - Enjoy random fun facts displayed on the page.
 
 Deployment
-This project supports auto-deployment with GitHub Actions.
+This project supports auto-deployment
+with GitHub Actions.
 - Workflow file: .github/workflows/firebase-deploy.yml
 - Runs on pushes to main branch
 - Uses Firebase CLI and a secret token (FIREBASE_TOKEN)
@@ -31,5 +32,6 @@ This project supports auto-deployment with GitHub Actions.
 Live Demo
 - GitHub Repository: https://github.com/afolabironke5-pixel/My-first-project-
 - Firebase Hosting: https://my-first-website-85419.web.app
+
 Author
 Created by Aderonke 💎
